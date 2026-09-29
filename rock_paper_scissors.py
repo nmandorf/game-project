@@ -13,12 +13,12 @@ def rock_paper_scissors():
 
     print("Welcome to Rock, Paper, Scissors! You'll pick a move, then the computer will also pick a move, and we'll see who wins.")
 
-    play = input("Do you want to play Rock, Paper, Scissors? (yes/no): ")
-    while play != "yes" and play != "no":
-        print('Invalid input. Please enter "yes" or "no".')
-        play = input("Do you want to play Rock, Paper, Scissors? (yes/no): ")
+    play = input("Do you want to play Rock, Paper, Scissors? (Y/N): ").upper()
+    while play != "Y" and play != "N":
+        print('Invalid input. Please enter "Y" or "N".')
+        play = input("Do you want to play Rock, Paper, Scissors? (Y/N): ").upper()
 
-    while play == "yes":
+    while play == "Y":
         user_choice = int(input("What is your choice: 1. Rock 2. Paper 3. Scissors: "))
         computer_choice = random.randint(1, 3)
         if user_choice not in [1, 2, 3]:
@@ -41,12 +41,12 @@ def rock_paper_scissors():
             elif user_choice == 3 and computer_choice == 2:
                 print("You win! Scissors beats paper.")
 
-        play = input("Do you want to play again? (yes/no): ")
-        while play != "yes" and play != "no":
-            print('Invalid input. Please enter "yes" or "no".')
-            play = input("Do you want to play again? (yes/no): ")
+        play = input("Do you want to play again? (Y/N): ").upper()
+        while play != "Y" and play != "N":
+            print('Invalid input. Please enter "Y" or "N".')
+            play = input("Do you want to play again? (Y/Y): ").upper()
 
-    print("Maybe next time!")
+    # print("Maybe next time!")
 
 if __name__== "__main__":
     rock_paper_scissors()
