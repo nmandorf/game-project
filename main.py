@@ -1,16 +1,28 @@
-# This is a sample Python script.
+# Lab 1
+# Group 5
+# Authors: Marvin Lew, Noa Tomas Mandorf, Chance Manning
+# Date: 09/25/26
 
-# Press ⌃R to execute it or replace it with your code.
-# Press Double ⇧ to search everywhere for classes, files, tool windows, actions, and settings.
+from rock_paper_scissors import rock_paper_scissors
+from guessing_game import guessing_game
 
-
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press ⌘F8 to toggle the breakpoint.
-
-
-# Press the green button in the gutter to run the script.
+#Noa Mandorf
 if __name__ == '__main__':
-    print_hi('PyCharm')
 
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+    while True:
+
+        game_to_play = input("Which game do you want to play? 1. Guessing Game, 2. Rock-paper-scissors. ")
+
+        if game_to_play == "1":
+            print(guessing_game())
+        elif game_to_play == "2":
+            print(rock_paper_scissors())
+
+        if input("Do you want to play again? (Y/N): ").upper() != "Y":
+            break
+
+    print("Thank you for playing!")
+
+    def cube(number):
+        """returns the cube of the number passed as an argument"""
+        return number * number * number
