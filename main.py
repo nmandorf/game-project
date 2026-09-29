@@ -18,6 +18,7 @@ from guessing import guessing_game
 if __name__ == '__main__':
 
     game_to_play = ''
+    print("Welcome the main menu!")
 
 # Main Loop - loops as long as the user wants to keep playing games
     while True:
